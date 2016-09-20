@@ -10,7 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
-import org.openshift.mlbparks.domain.MLBPark;
+import org.openshift.mlbparks.domain.Scotia;
 import org.openshift.mlbparks.mongo.DBConnection;
 
 import com.mongodb.BasicDBObject;
@@ -33,14 +33,24 @@ public class MLBParkResource {
 		return parkListCollection;
 	}
 
-	private MLBPark populateParkInformation(DBObject dataValue) {
-		MLBPark thePark = new MLBPark();
-		thePark.setName(dataValue.get("name"));
-		thePark.setPosition(dataValue.get("coordinates"));
-		thePark.setId(dataValue.get("_id").toString());
-		thePark.setBallpark(dataValue.get("ballpark"));
-		thePark.setLeague(dataValue.get("league"));
-		thePark.setPayroll(dataValue.get("payroll"));
+	private Scotia populateParkInformation(DBObject dataValue) {
+		Scotia thePark = new Scotia();
+		thePark.setStorenum(dataValue.get("storenum"));
+		thePark.setStorename(dataValue.get("storename"));
+		thePark.setStoretype(dataValue.get("storetype"));
+		thePark.setAddress(dataValue.get("address"));
+		thePark.setCity(dataValue.get("city"));
+		thePark.setState(dataValue.get("state"));
+		thePark.setZip(dataValue.get("zip"));
+		thePark.setPhone(dataValue.get("phone"));
+		thePark.setFax(dataValue.get("fax"));
+		thePark.setStorehours(dataValue.get("storehours"));
+		thePark.setlatitude(dataValue.get("latitude"));
+		thePark.setLongitude(dataValue.get("longitude"));
+		thePark.setGeo(dataValue.get("geo"));
+		thePark.setCountry(dataValue.get("country"));
+		thePark.setCountrycode(dataValue.get("countrycode"));
+		thePark.setCounty(dataValue.get("county"));
 
 		return thePark;
 	}
@@ -48,11 +58,11 @@ public class MLBParkResource {
 	// get all the mlb parks
 	@GET()
 	@Produces("application/json")
-	public List<MLBPark> getAllParks() {
-		ArrayList<MLBPark> allParksList = new ArrayList<MLBPark>();
+	public List<Scotia> getAllParks() {
+		ArrayList<Scotia> allParksList = new ArrayList<Scotia>();
 
-		DBCollection mlbParks = this.getMLBParksCollection();
-		DBCursor cursor = mlbParks.find();
+		DBCollection scotia = this.getMLBParksCollection();
+		DBCursor cursor = scotia.find();
 		try {
 			while (cursor.hasNext()) {
 				allParksList.add(this.populateParkInformation(cursor.next()));
@@ -67,11 +77,11 @@ public class MLBParkResource {
 	@GET
 	@Produces("application/json")
 	@Path("within")
-	public List<MLBPark> findParksWithin(@QueryParam("lat1") float lat1,
+	public List<Scotia> findParksWithin(@QueryParam("lat1") float lat1,
 			@QueryParam("lon1") float lon1, @QueryParam("lat2") float lat2,
 			@QueryParam("lon2") float lon2) {
 
-		ArrayList<MLBPark> allParksList = new ArrayList<MLBPark>();
+		ArrayList<Scotia> allParksList = new ArrayList<Scotia>();
 		DBCollection mlbParks = this.getMLBParksCollection();
 
 		// make the query object
