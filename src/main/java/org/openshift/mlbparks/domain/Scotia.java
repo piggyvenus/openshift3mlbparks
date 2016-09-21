@@ -26,11 +26,11 @@ public class Scotia {
 		this.storenum = storenum;
 	}
 
-	public Object getstorename() {
+	public Object getStorename() {
 		return storename;
 	}
 
-	public void setstorename(Object storename) {
+	public void setStorename(Object storename) {
 		this.storename = storename;
 	}
 
