@@ -1,43 +1,42 @@
 package org.openshift.mlbparks.domain;
 
 public class Scotia {
-	private Object storenum;
-	private Object storename;
-	private Object storetype;
+	private Object id;
+	private Object name;
+	private Object type;
 	private Object address;
 	private Object city;
 	private Object state;
 	private Object zip;
 	private Object phone;
 	private Object fax;
-	private Object storehours;
-	private Object geo;
 	private Object country;
 	private Object countrycode;
 	private Object county;
 
-	public Object getStorenum() {
-		return storenum;
+	public Object getName() {
+		return name;
 	}
 
-	public void setStorenum(Object storenum) {
-		this.storenum = storenum;
+	public void setName(Object name) {
+		this.name = name;
 	}
 
-	public Object getStorename() {
+	public Object getId() {
+		return id;
+	}
+
+	public void setId(Object id) {
+		this.id = id;
+	}
+
+
+	public Object getType() {
 		return storename;
 	}
 
-	public void setStorename(Object storename) {
-		this.storename = storename;
-	}
-
-	public Object getStoretype() {
-		return storetype;
-	}
-
-	public void setStoretype(Object storetype) {
-		this.storetype = storetype;
+	public void setType(Object type) {
+		this.type = type;
 	}
 
 	public Object getAddress() {
@@ -88,21 +87,6 @@ public class Scotia {
 		this.fax = fax;
 	}
 
-	public Object getStorehours() {
-		return storehours;
-	}
-
-	public void setStorehours(Object storehours) {
-		this.storehours = storehours;
-	}
-
-	public Object getGeo() {
-		return geo;
-	}
-
-	public void setGeo(Object geo) {
-		this.geo = geo;
-	}
 
 	public Object getCountry() {
 		return country;
