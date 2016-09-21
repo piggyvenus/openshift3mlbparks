@@ -45,8 +45,6 @@ public class MLBParkResource {
 		thePark.setPhone(dataValue.get("phone"));
 		thePark.setFax(dataValue.get("fax"));
 		thePark.setStorehours(dataValue.get("storehours"));
-		thePark.setLatitude(dataValue.get("latitude"));
-		thePark.setLongitude(dataValue.get("longitude"));
 		thePark.setGeo(dataValue.get("geo"));
 		thePark.setCountry(dataValue.get("country"));
 		thePark.setCountrycode(dataValue.get("countrycode"));
