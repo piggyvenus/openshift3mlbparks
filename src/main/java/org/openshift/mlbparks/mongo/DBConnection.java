@@ -39,6 +39,9 @@ public class DBConnection {
 		if (mongoPort == null) {
 			mongoPort = System.getenv("MONGODB_24_RHEL7_SERVICE_PORT");
 		}
+		System.out.println("database : mongoUser: " + mongoUser);
+		System.out.println("database : mongoPassword: " + mongoPassword);
+		System.out.println("database : mongoDBName: " + mongoDBName);
 		
 		int port = Integer.decode(mongoPort);
 		
@@ -46,6 +49,7 @@ public class DBConnection {
 		try {
 			mongo = new Mongo(mongoHost, port);
 			System.out.println("Connected to database");
+			System.out.println("Connected to database port"+ port);
 		} catch (UnknownHostException e) {
 			System.out.println("Couldn't connect to MongoDB: " + e.getMessage() + " :: " + e.getClass());
 		}
