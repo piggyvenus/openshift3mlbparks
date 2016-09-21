@@ -11,8 +11,6 @@ public class Scotia {
 	private Object phone;
 	private Object fax;
 	private Object storehours;
-	private Object latitude;
-	private Object longitude;
 	private Object geo;
 	private Object country;
 	private Object countrycode;
@@ -96,22 +94,6 @@ public class Scotia {
 
 	public void setStorehours(Object storehours) {
 		this.storehours = storehours;
-	}
-
-	public Object getLatitude() {
-		return latitude;
-	}
-
-	public void setLatitude(Object latitude) {
-		this.latitude = latitude;
-	}
-
-	public Object getLongitude() {
-		return longitude;
-	}
-
-	public void setLongitude(Object longitude) {
-		this.longitude = longitude;
 	}
 
 	public Object getGeo() {
