@@ -50,7 +50,7 @@ public class Scotia {
 		this.address = address;
 	}
 
-	public Object getCity) {
+	public Object getCity() {
 		return city;
 	}
 
