@@ -4,9 +4,9 @@ public class MLBPark {
 	private Object name;
 	private Object position;
 	private Object id;
-	private Object ballpark;
-	private Object payroll;
-	private Object league;
+	private Object type;
+	private Object address;
+	private Object city;
 
 	public Object getName() {
 		return name;
@@ -32,28 +32,28 @@ public class MLBPark {
 		this.id = id;
 	}
 
-	public Object getBallpark() {
-		return ballpark;
+	public Object getType() {
+		return type;
 	}
 
-	public void setBallpark(Object ballpark) {
-		this.ballpark = ballpark;
+	public void setType(Object type) {
+		this.type = type;
 	}
 
-	public Object getPayroll() {
-		return payroll;
+	public Object getAddress() {
+		return address;
 	}
 
-	public void setPayroll(Object payroll) {
-		this.payroll = payroll;
+	public void setAddress(Object address) {
+		this.address = address;
 	}
 
-	public Object getLeague() {
-		return league;
+	public Object getCity() {
+		return city;
 	}
 
-	public void setLeague(Object league) {
-		this.league = league;
+	public void setCity(Object city) {
+		this.city = city;
 	}
 
 }
