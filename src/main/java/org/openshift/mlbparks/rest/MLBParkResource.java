@@ -35,17 +35,16 @@ public class MLBParkResource {
 
 	private Scotia populateParkInformation(DBObject dataValue) {
 		Scotia thePark = new Scotia();
-		thePark.setStorenum(dataValue.get("storenum"));
-		thePark.setStorename(dataValue.get("storename"));
-		thePark.setStoretype(dataValue.get("storetype"));
+		thePark.setName(dataValue.get("name"));
+		thePark.setType(dataValue.get("type"));
+		thePark.setPosition(dataValue.get("coordinates"));
+		thePark.setId(dataValue.get("_id").toString());
 		thePark.setAddress(dataValue.get("address"));
 		thePark.setCity(dataValue.get("city"));
 		thePark.setState(dataValue.get("state"));
 		thePark.setZip(dataValue.get("zip"));
 		thePark.setPhone(dataValue.get("phone"));
 		thePark.setFax(dataValue.get("fax"));
-		thePark.setStorehours(dataValue.get("storehours"));
-		thePark.setGeo(dataValue.get("geo"));
 		thePark.setCountry(dataValue.get("country"));
 		thePark.setCountrycode(dataValue.get("countrycode"));
 		thePark.setCounty(dataValue.get("county"));
