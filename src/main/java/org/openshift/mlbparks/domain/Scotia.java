@@ -39,7 +39,7 @@ public class Scotia {
 
 
 	public Object getType() {
-		return storename;
+		return type;
 	}
 
 	public void setType(Object type) {
